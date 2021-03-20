@@ -1,27 +1,50 @@
-#container {
-  text-align: center;
+.center {
+  padding: 10px;
+  backdrop-filter: blur(5px);
+  background-color: white;
+}
 
+ion-content {
+  --ion-background-color: black;
+}
+
+.gradient {
+  --background: linear-gradient(
+    to right,
+    rgba(13, 237, 245, 0.623),
+    rgb(255, 255, 255)
+  );
+}
+
+.frostedGlass {
+  --background: linear-gradient(
+    to right,
+    rgba(13, 237, 245, 0.623),
+    rgb(255, 255, 255)
+  );
+  width: auto;
+  box-shadow: 0 0 1rem rgba(13, 237, 245, 0.2);
+  position: relative;
+}
+
+.frostedGlass:before {
+  content: "";
   position: absolute;
+  top: 0;
   left: 0;
   right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  bottom: 0;
+  box-shadow: inset 0 0 200px rgba(255, 255, 255, 0.5);
+  filter: blur(10px);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.cashIcon {
+  width: 2rem;
+  height: auto;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
+.cashOnHand {
+  font-weight: bold;
+  text-align: center;
+  color: black;
 }

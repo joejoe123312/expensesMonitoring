@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,25 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+.cash-in-css {
+  --backdrop-opacity: 0.8 !important;
+
+  .modal-wrapper {
+    --height: 40% !important;
+    --width: 90% !important;
+    border-radius: 20px;
+    position: absolute;
+  }
+}
+
+.add-transaction {
+  --backdrop-opacity: 0.8 !important;
+
+  .modal-wrapper {
+    --height: 45% !important;
+    --width: 90% !important;
+    border-radius: 20px;
+    position: absolute;
+  }
+}

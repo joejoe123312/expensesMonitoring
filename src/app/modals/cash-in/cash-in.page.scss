@@ -1,0 +1,35 @@
+.gradient {
+  --background: linear-gradient(
+    to right,
+    rgba(13, 237, 245, 0.623),
+    rgb(255, 255, 255)
+  );
+}
+
+.cashOnHand {
+  font-weight: bold;
+  text-align: center;
+  color: black;
+}
+
+ion-input {
+  border-bottom: solid black 1px;
+}
+
+.closeButton {
+  font-size: 20px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.cashInBtn {
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 15px;
+  float: right;
+}
+
+ion-container {
+  padding: 10px;
+  margin: 500px;
+}

@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="gradient">
+    <ion-title class="cashOnHand">
+      Cash In
+    </ion-title>
+    <ion-icon (click)="closeModal()" class="closeButton" slot="end" name="close-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-margin">
+  <h3>How much would you like to deposit?</h3>
+
+  <ion-input type="number" #cashInAmount placeholder="Enter amount here"></ion-input>
+  <button class="cashInBtn" (click)="cashIn(cashInAmount.value)">Cash In</button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="gradient">
+  </ion-toolbar>
+</ion-footer>

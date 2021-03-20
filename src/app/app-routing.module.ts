@@ -11,6 +11,22 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'expenses-list',
+    loadChildren: () => import('./expenses-list/expenses-list.module').then( m => m.ExpensesListPageModule)
+  },
+  {
+    path: 'cash-in',
+    loadChildren: () => import('./modals/cash-in/cash-in.module').then( m => m.CashInPageModule)
+  },
+  {
+    path: 'withdraw',
+    loadChildren: () => import('./modals/withdraw/withdraw.module').then( m => m.WithdrawPageModule)
+  },
+  {
+    path: 'add-transaction',
+    loadChildren: () => import('./modals/add-transaction/add-transaction.module').then( m => m.AddTransactionPageModule)
+  },
 ];
 
 @NgModule({

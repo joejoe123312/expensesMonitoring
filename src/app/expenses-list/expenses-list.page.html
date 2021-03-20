@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="gradient">
+    <ion-back-button slot="start" defaultHref="/home"></ion-back-button>
+    <ion-title>
+      Expenses List
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card style="background-color: whitesmoke;" *ngFor="let items of personalTransactions">
+    <ion-card-content>
+      <ion-row class="ion-text-center">
+        <ion-col size="9">
+          <h1>{{items.transaction_name}}</h1>
+        </ion-col>
+        <ion-col size="3">
+          <h1>{{items.costing}}</h1>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="gradient">
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="gradient">
+    <ion-title class="cashOnHand">
+      Add Transaction
+    </ion-title>
+    <ion-icon (click)="closeModal()" class="closeButton" slot="end" name="close-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-margin">
+  <h1>Transaction information</h1>
+  <ion-input #transactionName placeholder="Enter transaction name"></ion-input>
+  <ion-input #costing type="number" placeholder="How much did it cost?"></ion-input>
+  <button class="withdrawBtn" (click)="addTransaction(transactionName.value, costing.value)">Add</button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="gradient">
+  </ion-toolbar>
+</ion-footer>

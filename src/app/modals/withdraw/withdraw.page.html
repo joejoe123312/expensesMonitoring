@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="gradient">
+    <ion-title class="cashOnHand">
+      Withdraw
+    </ion-title>
+    <ion-icon (click)="closeModal()" class="closeButton" slot="end" name="close-outline"></ion-icon>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding ion-margin">
+  <h3>How much would you like to withdraw?</h3>
+
+  <ion-input type="number" #withdrawAmount placeholder="Enter amount here"></ion-input>
+  <button class="withdrawBtn" (click)="withdrawCash(withdrawAmount.value)">Withdraw</button>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar class="gradient">
+  </ion-toolbar>
+</ion-footer>

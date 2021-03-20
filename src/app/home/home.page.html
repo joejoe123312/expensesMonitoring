@@ -1,20 +1,60 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
+  <ion-toolbar class="gradient">
+    <ion-title class="cashOnHand">
+      Expenses Monitor
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
-  </div>
+  <!-- Profile card -->
+  <ion-card>
+    <ion-card-content class="center">
+      <ion-row>
+        <ion-col size="6">
+          <img class="img-fluid" src="../../assets/profilePicture.jpeg">
+        </ion-col>
+        <ion-col size="6">
+          <h1 class="ion-text-center">Cash on hand</h1>
+          <br>
+          <h1 class="totalExpenses ion-text-center">{{personalCash}}</h1>
+          <br>
+          <ion-button [routerLink]="['/expenses-list']" expand="block" color="primary" size="small">View Transactions</ion-button>
+          <ion-button (click)="resetTransactions()" color="danger" expand="block" size="small"><ion-icon name="trash-outline"></ion-icon></ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+  <!-- Profile card -->
+
+  <ion-card class="frostedGlass">
+    <ion-card-content>
+      <h1 class="cashOnHand">Manage cash on hand</h1>
+      <ion-row>
+        <ion-col size="4">
+          <ion-button color="success" (click)="cashIn()" expand="block">
+            <ion-img src="../../assets/cash.svg" class="cashIcon"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button color="warning" (click)="withdraw()" expand="block">
+            <ion-img src="../../assets/withdraw.svg" class="cashIcon"></ion-img>
+          </ion-button>
+        </ion-col>
+        <ion-col size="4">
+          <ion-button color="danger" (click)="resetCashOnHand()" expand="block">
+            <ion-icon name="refresh-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar class="gradient">
+    <ion-button *ngIf="(personalCash != 0) || (personalCash == undefined)" expand="block" (click)="addTransaction()">Add transaction</ion-button>
+  </ion-toolbar>
+</ion-footer>
